@@ -338,62 +338,104 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ===== 7. STREAMS & EVENTS ===== */}
+        {/* ===== 7. LIVE STREAMS ===== */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Streams &amp; Events
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+            Live Streams
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Schedule */}
-            <div className="space-y-6">
-              {[
-                {
-                  name: "Smart Contract Sundays",
-                  type: "Weekly Workshop",
-                  accent: "#55efc4",
-                },
-                {
-                  name: "Artist Spotlight & Live AMA",
-                  type: "Community Showcase",
-                  accent: "#74b9ff",
-                },
-                {
-                  name: "Web3 News & Trends with Ohnahji",
-                  type: "Live Q&A",
-                  accent: "#ffeaa7",
-                },
-              ].map((ev) => (
-                <div
-                  key={ev.name}
-                  className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-6 flex items-center gap-4"
-                >
-                  <div
-                    className="w-3 h-3 rounded-full shrink-0"
-                    style={{ background: ev.accent }}
-                  />
-                  <div>
-                    <h4 className="font-semibold">{ev.name}</h4>
-                    <p className="text-white/50 text-sm">{ev.type}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Twitch embed placeholder */}
-            <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg flex items-center justify-center min-h-[280px]">
-              <div className="text-center text-white/30">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="mx-auto mb-3"
-                >
-                  <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z" />
-                </svg>
-                <p className="text-sm font-medium">Twitch Stream Embed</p>
-                <p className="text-xs mt-1">Coming soon</p>
+          <p className="text-white/50 text-center mb-12 max-w-2xl mx-auto">
+            Catch us live — see who&apos;s streaming right now
+          </p>
+
+          {/* Side-by-side Twitch embeds */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* bettercallzaal stream */}
+            <div className="rounded-2xl border border-[#fdcb6e]/30 bg-white/5 backdrop-blur-lg overflow-hidden">
+              <div className="flex items-center gap-3 px-5 py-3 border-b border-white/10">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
+                <span className="font-semibold text-[#fdcb6e]">bettercallzaal</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#a970ff" className="ml-auto"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z" /></svg>
+              </div>
+              <div className="aspect-video">
+                <iframe
+                  src="https://player.twitch.tv/?channel=bettercallzaal&parent=b-zbuild2.vercel.app&parent=localhost"
+                  height="100%"
+                  width="100%"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="px-5 py-3 border-t border-white/10">
+                <iframe
+                  src="https://www.twitch.tv/embed/bettercallzaal/chat?parent=b-zbuild2.vercel.app&parent=localhost&darkpopout"
+                  height="200"
+                  width="100%"
+                  className="w-full rounded-lg"
+                />
               </div>
             </div>
+
+            {/* Ohnahji stream */}
+            <div className="rounded-2xl border border-[#74b9ff]/30 bg-white/5 backdrop-blur-lg overflow-hidden">
+              <div className="flex items-center gap-3 px-5 py-3 border-b border-white/10">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
+                <span className="font-semibold text-[#74b9ff]">Ohnahji</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#a970ff" className="ml-auto"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z" /></svg>
+              </div>
+              <div className="aspect-video">
+                <iframe
+                  src="https://player.twitch.tv/?channel=ohnahji&parent=b-zbuild2.vercel.app&parent=localhost"
+                  height="100%"
+                  width="100%"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="px-5 py-3 border-t border-white/10">
+                <iframe
+                  src="https://www.twitch.tv/embed/ohnahji/chat?parent=b-zbuild2.vercel.app&parent=localhost&darkpopout"
+                  height="200"
+                  width="100%"
+                  className="w-full rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Schedule */}
+          <h3 className="text-xl font-bold text-center mb-6">Upcoming Schedule</h3>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              {
+                name: "Smart Contract Sundays",
+                type: "Weekly Workshop",
+                accent: "#55efc4",
+              },
+              {
+                name: "Artist Spotlight & Live AMA",
+                type: "Community Showcase",
+                accent: "#74b9ff",
+              },
+              {
+                name: "Web3 News & Trends with Ohnahji",
+                type: "Live Q&A",
+                accent: "#ffeaa7",
+              },
+            ].map((ev) => (
+              <div
+                key={ev.name}
+                className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-5 flex items-center gap-4"
+              >
+                <div
+                  className="w-3 h-3 rounded-full shrink-0"
+                  style={{ background: ev.accent }}
+                />
+                <div>
+                  <h4 className="font-semibold text-sm">{ev.name}</h4>
+                  <p className="text-white/50 text-xs">{ev.type}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
