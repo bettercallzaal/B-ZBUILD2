@@ -358,7 +358,7 @@ export default function HomePage() {
               </div>
               <div className="aspect-video">
                 <iframe
-                  src="https://player.twitch.tv/?channel=bettercallzaal&parent=b-zbuild2.vercel.app&parent=localhost"
+                  src="https://player.twitch.tv/?channel=bettercallzaal&parent=b-zbuild-2.vercel.app&parent=localhost"
                   height="100%"
                   width="100%"
                   allowFullScreen
@@ -367,7 +367,7 @@ export default function HomePage() {
               </div>
               <div className="px-5 py-3 border-t border-white/10">
                 <iframe
-                  src="https://www.twitch.tv/embed/bettercallzaal/chat?parent=b-zbuild2.vercel.app&parent=localhost&darkpopout"
+                  src="https://www.twitch.tv/embed/bettercallzaal/chat?parent=b-zbuild-2.vercel.app&parent=localhost&darkpopout"
                   height="200"
                   width="100%"
                   className="w-full rounded-lg"
@@ -384,7 +384,7 @@ export default function HomePage() {
               </div>
               <div className="aspect-video">
                 <iframe
-                  src="https://player.twitch.tv/?channel=ohnahji&parent=b-zbuild2.vercel.app&parent=localhost"
+                  src="https://player.twitch.tv/?channel=ohnahji&parent=b-zbuild-2.vercel.app&parent=localhost"
                   height="100%"
                   width="100%"
                   allowFullScreen
@@ -393,7 +393,7 @@ export default function HomePage() {
               </div>
               <div className="px-5 py-3 border-t border-white/10">
                 <iframe
-                  src="https://www.twitch.tv/embed/ohnahji/chat?parent=b-zbuild2.vercel.app&parent=localhost&darkpopout"
+                  src="https://www.twitch.tv/embed/ohnahji/chat?parent=b-zbuild-2.vercel.app&parent=localhost&darkpopout"
                   height="200"
                   width="100%"
                   className="w-full rounded-lg"
