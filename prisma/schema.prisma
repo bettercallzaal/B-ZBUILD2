@@ -1,0 +1,147 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  admin
+  member
+}
+
+enum ContentType {
+  link
+  clip
+  bookmark
+  quote
+  note
+}
+
+enum Platform {
+  github
+  twitter
+  youtube
+  spotify
+  twitch
+  podcast
+  nft
+}
+
+enum EventType {
+  stream
+  workshop
+  showcase
+  ama
+}
+
+model Member {
+  id            String   @id @default(uuid())
+  name          String
+  slug          String   @unique
+  bio           String   @default("")
+  avatar        String   @default("")
+  role          Role     @default(member)
+  platformLinks Json     @default("{}")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  content       Content[]
+  feedItems     FeedItem[]
+  integrations  MemberIntegration[]
+  events        Event[]
+}
+
+model MemberIntegration {
+  id           String    @id @default(uuid())
+  memberId     String
+  platform     Platform
+  username     String
+  enabled      Boolean   @default(true)
+  lastPolledAt DateTime?
+  lastError    String?
+  errorCount   Int       @default(0)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  member       Member    @relation(fields: [memberId], references: [id], onDelete: Cascade)
+
+  @@unique([memberId, platform])
+}
+
+model Content {
+  id        String      @id @default(uuid())
+  type      ContentType
+  title     String
+  body      String      @default("")
+  url       String?
+  thumbnail String?
+  tags      String[]
+  memberId  String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  member    Member      @relation(fields: [memberId], references: [id], onDelete: Cascade)
+}
+
+model FeedItem {
+  id          String    @id @default(uuid())
+  platform    Platform
+  externalId  String
+  title       String
+  description String?
+  url         String
+  thumbnail   String?
+  metadata    Json      @default("{}")
+  memberId    String
+  publishedAt DateTime
+  fetchedAt   DateTime  @default(now())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  member      Member    @relation(fields: [memberId], references: [id], onDelete: Cascade)
+
+  @@unique([platform, externalId])
+}
+
+model LearningTrack {
+  id          String   @id @default(uuid())
+  title       String
+  description String   @default("")
+  category    String
+  order       Int      @default(0)
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  lessons     Lesson[]
+}
+
+model Lesson {
+  id       String @id @default(uuid())
+  title    String
+  content  String @default("")
+  order    Int    @default(0)
+  trackId  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  track    LearningTrack @relation(fields: [trackId], references: [id], onDelete: Cascade)
+}
+
+model Event {
+  id          String    @id @default(uuid())
+  title       String
+  description String    @default("")
+  type        EventType
+  date        DateTime
+  streamUrl   String?
+  recurring   Boolean   @default(false)
+  memberId    String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  member      Member?   @relation(fields: [memberId], references: [id], onDelete: SetNull)
+}
