@@ -5,7 +5,7 @@ import { useEffect } from "react";
 /* ------------------------------------------------------------------ */
 /*  Ohnahji & The ZAO — Split-Theme Homepage                          */
 /*  Left = bettercallzaal / ZAO (#141e27 + #e0ddaa)                   */
-/*  Right = Ohnahji (#74b9ff + #ff6b9d pink/blue)                     */
+/*  Right = Ohnahji (#FE517E pink + #3C0010 burgundy + #F1C40F gold)  */
 /* ------------------------------------------------------------------ */
 
 export default function HomePage() {
@@ -32,7 +32,7 @@ export default function HomePage() {
           <a href="#hero" className="flex items-center gap-3">
             <span className="text-lg font-bold text-[#e0ddaa]">The ZAO</span>
             <span className="text-white/30 text-sm">&times;</span>
-            <span className="text-lg font-bold text-[#74b9ff]">Ohnahji</span>
+            <span className="text-lg font-bold text-[#FE517E]">Ohnahji</span>
           </a>
           <div className="hidden md:flex gap-6 text-sm font-medium text-white/70">
             {["Home", "About", "Team", "Feed", "Learning", "Streams", "Apply"].map((l) => (
@@ -78,10 +78,10 @@ export default function HomePage() {
           {/* Split background */}
           <div className="absolute inset-0 flex">
             <div className="w-1/2 bg-gradient-to-br from-[#141e27] to-[#1a2634]" />
-            <div className="w-1/2 bg-gradient-to-bl from-[#1a1028] to-[#141e27]" />
+            <div className="w-1/2 bg-gradient-to-bl from-[#3C0010] to-[#141e27]" />
           </div>
           {/* Center glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-[#e0ddaa]/10 to-[#74b9ff]/10 blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-[#e0ddaa]/10 to-[#FE517E]/10 blur-[120px] pointer-events-none" />
           {/* Divider line */}
           <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block" />
 
@@ -108,19 +108,19 @@ export default function HomePage() {
               </div>
               {/* Right — Ohnahji */}
               <div className="text-center md:text-right space-y-6">
-                <div className="inline-block px-4 py-1.5 rounded-full border border-[#74b9ff]/30 bg-[#74b9ff]/10 text-[#74b9ff] text-xs font-semibold uppercase tracking-widest">
+                <div className="inline-block px-4 py-1.5 rounded-full border border-[#FE517E]/30 bg-[#FE517E]/10 text-[#FE517E] text-xs font-semibold uppercase tracking-widest">
                   Ohnahji University
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
                   Educating{" "}
-                  <span className="text-[#74b9ff]">Web3</span>
+                  <span className="text-[#FE517E]">Web3</span>
                 </h1>
                 <p className="text-white/60 text-lg max-w-md md:ml-auto">
                   Ohnahji University educates, incubates, and elevates our community with the knowledge to succeed in crypto and blockchain.
                 </p>
                 <a
                   href="#about"
-                  className="inline-block px-8 py-3 rounded-lg bg-[#74b9ff] text-[#141e27] font-semibold hover:bg-[#74b9ff]/90 transition-colors"
+                  className="inline-block px-8 py-3 rounded-lg bg-[#FE517E] text-[#141e27] font-semibold hover:bg-[#FE517E]/90 transition-colors"
                 >
                   Start Learning
                 </a>
@@ -159,10 +159,10 @@ export default function HomePage() {
                 </div>
               </div>
               {/* Ohnahji side */}
-              <div className="rounded-2xl md:rounded-l-none border border-[#74b9ff]/20 bg-[#1a1028]/80 backdrop-blur-lg p-10">
+              <div className="rounded-2xl md:rounded-l-none border border-[#FE517E]/20 bg-[#3C0010]/80 backdrop-blur-lg p-10">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-[#74b9ff]/20 flex items-center justify-center text-[#74b9ff] font-bold text-lg">O</div>
-                  <h3 className="text-2xl font-bold text-[#74b9ff]">Ohnahji University</h3>
+                  <div className="w-10 h-10 rounded-full bg-[#FE517E]/20 flex items-center justify-center text-[#FE517E] font-bold text-lg">O</div>
+                  <h3 className="text-2xl font-bold text-[#FE517E]">Ohnahji University</h3>
                 </div>
                 <p className="text-white/70 leading-relaxed mb-6">
                   Ohnahji is a Web3-native brand focused on one thing: education.
@@ -172,7 +172,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["Education", "Blockchain", "NFTs", "Community", "HBCU"].map((tag) => (
-                    <span key={tag} className="px-3 py-1 rounded-full text-xs border border-[#74b9ff]/30 text-[#74b9ff]/80 bg-[#74b9ff]/5">
+                    <span key={tag} className="px-3 py-1 rounded-full text-xs border border-[#FE517E]/30 text-[#FE517E]/80 bg-[#FE517E]/5">
                       {tag}
                     </span>
                   ))}
@@ -213,20 +213,20 @@ export default function HomePage() {
                 </div>
               </div>
               {/* Ohnahji */}
-              <div className="rounded-2xl border border-[#74b9ff]/20 bg-[#1a1028]/60 backdrop-blur-lg p-8 flex flex-col items-center text-center">
-                <div className="w-28 h-28 rounded-full mb-6 flex items-center justify-center text-4xl font-bold border-2 border-[#74b9ff] text-[#74b9ff] bg-[#74b9ff]/10">
+              <div className="rounded-2xl border border-[#FE517E]/20 bg-[#3C0010]/60 backdrop-blur-lg p-8 flex flex-col items-center text-center">
+                <div className="w-28 h-28 rounded-full mb-6 flex items-center justify-center text-4xl font-bold border-2 border-[#FE517E] text-[#FE517E] bg-[#FE517E]/10">
                   O
                 </div>
-                <h3 className="text-xl font-bold text-[#74b9ff] mb-1">Ohnahji</h3>
+                <h3 className="text-xl font-bold text-[#FE517E] mb-1">Ohnahji</h3>
                 <p className="text-white/40 text-xs uppercase tracking-wider mb-4">Founder &middot; Ohnahji University</p>
                 <p className="text-white/60 text-sm leading-relaxed mb-6">
                   Web3-native educator and founder of Ohnahji University. Focused on empowering creators through blockchain education.
                 </p>
                 <div className="flex gap-4 text-white/40">
-                  <a href="https://x.com/ohnahji" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-[#74b9ff] transition-colors">
+                  <a href="https://x.com/ohnahji" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-[#FE517E] transition-colors">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
                   </a>
-                  <a href="https://github.com/ohnahji" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-[#74b9ff] transition-colors">
+                  <a href="https://github.com/ohnahji" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-[#FE517E] transition-colors">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
                   </a>
                   <a href="https://youtube.com/@ohnahji" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-red-400 transition-colors">
@@ -279,16 +279,16 @@ export default function HomePage() {
               {/* Ohnahji feed */}
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-6 h-6 rounded-full bg-[#74b9ff]/20 flex items-center justify-center text-[#74b9ff] text-xs font-bold">O</div>
-                  <span className="text-sm font-semibold text-[#74b9ff]">Ohnahji</span>
+                  <div className="w-6 h-6 rounded-full bg-[#FE517E]/20 flex items-center justify-center text-[#FE517E] text-xs font-bold">O</div>
+                  <span className="text-sm font-semibold text-[#FE517E]">Ohnahji</span>
                 </div>
                 <div className="space-y-4">
                   {[
                     { platform: "YouTube", icon: "▶", title: "Web3 for Musicians Ep. 1", detail: "Ohnahji University", date: "Mar 18" },
                     { platform: "Spotify", icon: "♫", title: "New single: 'On Chain'", detail: "Ohnahji", date: "Mar 14" },
                   ].map((item) => (
-                    <div key={item.title} className="rounded-xl border border-[#74b9ff]/15 bg-[#1a1028]/60 backdrop-blur-lg p-5">
-                      <div className="flex items-center gap-2 text-[#74b9ff]/60 text-xs font-semibold uppercase tracking-wider mb-2">
+                    <div key={item.title} className="rounded-xl border border-[#FE517E]/15 bg-[#3C0010]/60 backdrop-blur-lg p-5">
+                      <div className="flex items-center gap-2 text-[#FE517E]/60 text-xs font-semibold uppercase tracking-wider mb-2">
                         <span>{item.icon}</span>
                         <span>{item.platform}</span>
                         <span className="ml-auto text-white/30">{item.date}</span>
@@ -326,14 +326,14 @@ export default function HomePage() {
                 {
                   title: "NFT Creation & Minting",
                   desc: "A hands-on guide to creating, deploying, and managing your own NFT project.",
-                  border: "border-[#74b9ff]/30",
-                  accent: "#74b9ff",
+                  border: "border-[#FE517E]/30",
+                  accent: "#FE517E",
                 },
                 {
                   title: "Smart Contract Development",
                   desc: "An introduction to Solidity and building simple, effective smart contracts.",
-                  border: "border-[#ff6b9d]/30",
-                  accent: "#ff6b9d",
+                  border: "border-[#F1C40F]/30",
+                  accent: "#F1C40F",
                 },
               ].map((t) => (
                 <div
@@ -400,10 +400,10 @@ export default function HomePage() {
               </div>
 
               {/* Ohnahji stream */}
-              <div className="rounded-2xl border border-[#74b9ff]/20 bg-[#1a1028]/60 backdrop-blur-lg overflow-hidden">
-                <div className="flex items-center gap-3 px-5 py-3 border-b border-[#74b9ff]/10">
+              <div className="rounded-2xl border border-[#FE517E]/20 bg-[#3C0010]/60 backdrop-blur-lg overflow-hidden">
+                <div className="flex items-center gap-3 px-5 py-3 border-b border-[#FE517E]/10">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
-                  <span className="font-semibold text-[#74b9ff]">Ohnahji</span>
+                  <span className="font-semibold text-[#FE517E]">Ohnahji</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="#a970ff" className="ml-auto"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z" /></svg>
                 </div>
                 <div className="aspect-video">
@@ -415,7 +415,7 @@ export default function HomePage() {
                     className="w-full h-full"
                   />
                 </div>
-                <div className="px-5 py-3 border-t border-[#74b9ff]/10">
+                <div className="px-5 py-3 border-t border-[#FE517E]/10">
                   <iframe
                     src="https://www.twitch.tv/embed/ohnahji/chat?parent=b-zbuild-2.vercel.app&parent=localhost&darkpopout"
                     height="200"
@@ -431,8 +431,8 @@ export default function HomePage() {
             <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {[
                 { name: "Smart Contract Sundays", type: "Weekly Workshop", accent: "#e0ddaa" },
-                { name: "Artist Spotlight & Live AMA", type: "Community Showcase", accent: "#74b9ff" },
-                { name: "Web3 News & Trends", type: "Live Q&A", accent: "#ff6b9d" },
+                { name: "Artist Spotlight & Live AMA", type: "Community Showcase", accent: "#FE517E" },
+                { name: "Web3 News & Trends", type: "Live Q&A", accent: "#F1C40F" },
               ].map((ev) => (
                 <div key={ev.name} className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-5 flex items-center gap-4">
                   <div className="w-3 h-3 rounded-full shrink-0" style={{ background: ev.accent }} />
@@ -466,16 +466,16 @@ export default function HomePage() {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#74b9ff] transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#FE517E] transition-colors"
                 />
                 <textarea
                   rows={4}
                   placeholder="Your Message"
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#ff6b9d] transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#F1C40F] transition-colors resize-none"
                 />
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-lg bg-gradient-to-r from-[#e0ddaa] to-[#74b9ff] text-[#141e27] font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full py-3 rounded-lg bg-gradient-to-r from-[#e0ddaa] to-[#FE517E] text-[#141e27] font-semibold hover:opacity-90 transition-opacity"
                 >
                   Send Message
                 </button>
@@ -494,7 +494,7 @@ export default function HomePage() {
           <div className="flex items-center gap-2">
             <span className="text-[#e0ddaa]/60 text-sm font-medium">The ZAO</span>
             <span className="text-white/20 text-xs">&times;</span>
-            <span className="text-[#74b9ff]/60 text-sm font-medium">Ohnahji</span>
+            <span className="text-[#FE517E]/60 text-sm font-medium">Ohnahji</span>
             <span className="text-white/30 text-sm ml-2">&copy; 2025</span>
           </div>
           <div className="flex gap-4 text-white/40">
