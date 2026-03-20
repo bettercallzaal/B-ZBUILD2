@@ -35,7 +35,7 @@ export default function HomePage() {
             <span className="text-lg font-bold text-[#F1C40F]">Ohnahji</span>
           </a>
           <div className="hidden md:flex gap-6 text-sm font-medium text-white/70">
-            {["Home", "About", "Team", "Feed", "Learning", "Streams", "Apply"].map((l) => (
+            {["Home", "About", "Team", "Streams", "Apply"].map((l) => (
               <a
                 key={l}
                 href={l === "Home" ? "#hero" : `#${l.toLowerCase()}`}
@@ -59,7 +59,7 @@ export default function HomePage() {
           </button>
         </div>
         <div id="mobile-menu" className="hidden md:hidden px-4 pb-4 flex flex-col gap-3 text-sm font-medium text-white/70">
-          {["Home", "About", "Team", "Feed", "Learning", "Streams", "Apply"].map((l) => (
+          {["Home", "About", "Team", "Streams", "Apply"].map((l) => (
             <a
               key={l}
               href={l === "Home" ? "#hero" : `#${l.toLowerCase()}`}
@@ -244,122 +244,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ===== BUILD IN PUBLIC — SPLIT FEED ===== */}
-        <section id="feed" className="relative py-20">
-          <div className="absolute inset-0 bg-[#0d1117]" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold">Build in Public</h2>
-              <p className="mt-3 text-white/50">Follow what we&apos;re building in real-time</p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* ZAO / bettercallzaal feed */}
-              <div>
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="w-6 h-6 rounded-full bg-[#e0ddaa]/20 flex items-center justify-center text-[#e0ddaa] text-xs font-bold">Z</div>
-                  <span className="text-sm font-semibold text-[#e0ddaa]">bettercallzaal</span>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { platform: "GitHub", icon: "⚙", title: "Pushed homepage layout", detail: "bandz-builds/main", date: "Mar 20" },
-                    { platform: "X", icon: "𝕏", title: "Announced ZAO-PALOOZA dates", detail: "@bettercallzaal", date: "Mar 16" },
-                  ].map((item) => (
-                    <div key={item.title} className="rounded-xl border border-[#e0ddaa]/15 bg-[#141e27]/60 backdrop-blur-lg p-5">
-                      <div className="flex items-center gap-2 text-[#e0ddaa]/60 text-xs font-semibold uppercase tracking-wider mb-2">
-                        <span>{item.icon}</span>
-                        <span>{item.platform}</span>
-                        <span className="ml-auto text-white/30">{item.date}</span>
-                      </div>
-                      <h4 className="font-semibold text-sm">{item.title}</h4>
-                      <p className="text-white/40 text-xs mt-1">{item.detail}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Ohnahji feed */}
-              <div>
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="w-6 h-6 rounded-full bg-[#F1C40F]/20 flex items-center justify-center text-[#F1C40F] text-xs font-bold">O</div>
-                  <span className="text-sm font-semibold text-[#F1C40F]">Ohnahji</span>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { platform: "YouTube", icon: "▶", title: "Web3 for Musicians Ep. 1", detail: "Ohnahji University", date: "Mar 18" },
-                    { platform: "Spotify", icon: "♫", title: "New single: 'On Chain'", detail: "Ohnahji", date: "Mar 14" },
-                  ].map((item) => (
-                    <div key={item.title} className="rounded-xl border border-[#FE517E]/15 bg-[#3C0010]/60 backdrop-blur-lg p-5">
-                      <div className="flex items-center gap-2 text-[#FE517E]/60 text-xs font-semibold uppercase tracking-wider mb-2">
-                        <span>{item.icon}</span>
-                        <span>{item.platform}</span>
-                        <span className="ml-auto text-white/30">{item.date}</span>
-                      </div>
-                      <h4 className="font-semibold text-sm">{item.title}</h4>
-                      <p className="text-white/40 text-xs mt-1">{item.detail}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="text-center mt-10">
-              <a href="/feed" className="inline-block px-8 py-3 rounded-lg border border-white/20 text-white/80 font-semibold hover:border-white/40 transition-colors">
-                View Full Feed
-              </a>
-            </div>
-          </div>
-        </section>
 
-        {/* ===== LEARNING TRACKS ===== */}
-        <section id="learning" className="relative py-20">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117] to-[#111]" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
-              Learning Tracks
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Web3 Fundamentals",
-                  desc: "Start your journey with the basics of blockchain, crypto, and decentralized technology.",
-                  border: "border-[#e0ddaa]/30",
-                  accent: "#e0ddaa",
-                },
-                {
-                  title: "NFT Creation & Minting",
-                  desc: "A hands-on guide to creating, deploying, and managing your own NFT project.",
-                  border: "border-[#F1C40F]/30",
-                  accent: "#F1C40F",
-                },
-                {
-                  title: "Smart Contract Development",
-                  desc: "An introduction to Solidity and building simple, effective smart contracts.",
-                  border: "border-[#F1C40F]/30",
-                  accent: "#F1C40F",
-                },
-              ].map((t) => (
-                <div
-                  key={t.title}
-                  className={`rounded-2xl border ${t.border} bg-white/5 backdrop-blur-lg p-8 flex flex-col`}
-                >
-                  <span
-                    className="self-start text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4"
-                    style={{ background: `${t.accent}15`, color: t.accent, border: `1px solid ${t.accent}30` }}
-                  >
-                    Track
-                  </span>
-                  <h3 className="text-xl font-bold mb-3">{t.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">{t.desc}</p>
-                  <a
-                    href="#"
-                    className="inline-block text-center px-6 py-2.5 rounded-lg font-semibold text-sm transition-colors"
-                    style={{ background: t.accent, color: "#141e27" }}
-                  >
-                    Start Learning
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* ===== LIVE STREAMS — SPLIT ===== */}
         <section id="streams" className="relative py-20">
@@ -426,23 +313,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Schedule */}
-            <h3 className="text-xl font-bold text-center mb-6">Upcoming Schedule</h3>
-            <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              {[
-                { name: "Smart Contract Sundays", type: "Weekly Workshop", accent: "#e0ddaa" },
-                { name: "Artist Spotlight & Live AMA", type: "Community Showcase", accent: "#F1C40F" },
-                { name: "Web3 News & Trends", type: "Live Q&A", accent: "#F1C40F" },
-              ].map((ev) => (
-                <div key={ev.name} className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-5 flex items-center gap-4">
-                  <div className="w-3 h-3 rounded-full shrink-0" style={{ background: ev.accent }} />
-                  <div>
-                    <h4 className="font-semibold text-sm">{ev.name}</h4>
-                    <p className="text-white/50 text-xs">{ev.type}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
