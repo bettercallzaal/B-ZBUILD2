@@ -455,7 +455,7 @@ export default function HomePage() {
                 Join the Community
               </h2>
               <p className="text-white/60 mb-8 max-w-lg mx-auto">
-                Want to collaborate, learn, or build with us? Fill out our application form and we&apos;ll be in touch.
+                Want to submit something for us to check out? Drop it in the form and we&apos;ll take a look.
               </p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdN_NOMDICWNPOymcN6YfjFtL3MkYHh8HgJ5klm8w83d42BlA/viewform"
