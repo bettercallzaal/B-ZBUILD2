@@ -446,43 +446,25 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ===== CONTACT / CTA ===== */}
+        {/* ===== APPLY / CTA ===== */}
         <section id="apply" className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117] to-[#111]" />
-          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg p-8 sm:p-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3">
-                Get in Touch
+              <h2 className="text-3xl sm:text-4xl font-bold mb-3">
+                Join the Community
               </h2>
-              <p className="text-white/60 text-center mb-10">
-                Have questions or want to collaborate?
+              <p className="text-white/60 mb-8 max-w-lg mx-auto">
+                Want to collaborate, learn, or build with us? Fill out our application form and we&apos;ll be in touch.
               </p>
-              <form onSubmit={(e) => e.preventDefault()} className="max-w-lg mx-auto flex flex-col gap-5">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#e0ddaa] transition-colors"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#F1C40F] transition-colors"
-                />
-                <textarea
-                  rows={4}
-                  placeholder="Your Message"
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#F1C40F] transition-colors resize-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-lg bg-gradient-to-r from-[#e0ddaa] via-[#F1C40F] to-[#FE517E] text-[#141e27] font-semibold hover:opacity-90 transition-opacity"
-                >
-                  Send Message
-                </button>
-                <a href="/apply" className="text-center text-white/50 text-sm font-medium hover:text-white transition-colors">
-                  Or apply to join the community &rarr;
-                </a>
-              </form>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdN_NOMDICWNPOymcN6YfjFtL3MkYHh8HgJ5klm8w83d42BlA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-10 py-4 rounded-lg bg-gradient-to-r from-[#e0ddaa] via-[#F1C40F] to-[#FE517E] text-[#141e27] font-bold text-lg hover:opacity-90 transition-opacity"
+              >
+                Apply Now
+              </a>
             </div>
           </div>
         </section>
