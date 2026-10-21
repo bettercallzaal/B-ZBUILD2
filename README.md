@@ -10,11 +10,11 @@ Live site: https://b-zbuild-2.vercel.app
 
 ## Who
 
-- **bettercallzaal** - co-host, co-founder of The ZAO, a community helping
+- **bettercallzaal** - co-founder of The ZAO, a community helping
   independent musicians keep their margins, data and IP.
   [X](https://x.com/bettercallzaal) / [GitHub](https://github.com/bettercallzaal) /
   [Twitch](https://twitch.tv/bettercallzaal)
-- **Ohnahji** - co-host, founder of Ohnahji University: Web3 education that
+- **Ohnahji** - founder of Ohnahji University: Web3 education that
   educates, incubates and elevates. [X](https://x.com/ohnahji) /
   [YouTube](https://youtube.com/@ohnahji) / [Twitch](https://twitch.tv/ohnahji)
 
