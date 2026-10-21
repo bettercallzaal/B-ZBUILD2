@@ -1,11 +1,10 @@
 # B-ZBUILD2 - Ohnahji & The ZAO, Build in Public
 
-The public companion repo for **Let's Talk About ETH with Maceo** (formerly
-*Let's Talk About Web3*), the show co-hosted by
+The public home for builds done live on stream by
 [bettercallzaal](https://x.com/bettercallzaal) of The ZAO and
 [Ohnahji](https://x.com/ohnahji) of Ohnahji University.
 
-When we build something live on the show, it lands here.
+When we build something live, it lands here.
 
 Live site: https://b-zbuild-2.vercel.app
 
@@ -21,7 +20,7 @@ Live site: https://b-zbuild-2.vercel.app
 
 ## What lands here
 
-- **Live-build artifacts.** Anything we build on air ships as a pull request to
+- **Live-build artifacts.** Anything we build on stream ships as a pull request to
   this repo, so the code outlives the stream.
 - **The site.** A split ZAO x Ohnahji homepage: who we are, the team, both
   Twitch streams embedded side by side, and an apply link for creators who want
@@ -64,7 +63,7 @@ NextAuth v5. Deployed on Vercel.
 
 ## Contributing
 
-Open a pull request against `master`. Builds from the show come in the same way.
+Open a pull request against `master`. Builds from stream come in the same way.
 
 ## License
 
