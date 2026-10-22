@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
 /* ------------------------------------------------------------------ */
 /*  Ohnahji & The ZAO — Split-Theme Homepage                          */
@@ -313,6 +314,13 @@ export default function HomePage() {
               </div>
             </div>
 
+            <p className="text-center text-white/60">
+              Missed one? Watch{" "}
+              <Link href="/streams/2026-10-21" className="underline hover:text-white">
+                B&amp;Z Builds, 21 Oct 2026
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
