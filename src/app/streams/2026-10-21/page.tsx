@@ -67,7 +67,11 @@ export default function Stream20261021() {
         </section>
 
         <p className="mt-12 text-sm text-white/50">
-          Music: OHNAHJI and HENG DEM by IMan Afrikah.
+          Music: OHNAHJI and HENG DEM by{" "}
+          <a href="https://audius.co/IManAfrikah" className="underline hover:text-white">
+            IMan Afrikah
+          </a>
+          .
         </p>
 
         <p className="mt-2 text-sm text-white/50">
