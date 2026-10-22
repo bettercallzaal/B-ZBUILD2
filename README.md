@@ -1,6 +1,6 @@
 # B-ZBUILD2 - Ohnahji & The ZAO, Build in Public
 
-The public home for builds done live on stream by
+The public home for B&Z Builds, the show where things get built live on stream by
 [bettercallzaal](https://x.com/bettercallzaal) of The ZAO and
 [Ohnahji](https://x.com/ohnahji) of Ohnahji University.
 
