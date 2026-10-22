@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 /* ------------------------------------------------------------------ */
 /*  B&Z Builds - 21 Oct 2026 stream page                              */
@@ -17,9 +18,9 @@ export default function Stream20261021() {
   return (
     <main className="min-h-screen bg-[#0d1117] text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-        <a href="/#streams" className="text-sm text-white/50 hover:text-white">
+        <Link href="/#streams" className="text-sm text-white/50 hover:text-white">
           &larr; Back home
-        </a>
+        </Link>
 
         <h1 className="mt-6 text-3xl sm:text-4xl font-bold">
           <span className="text-[#e0ddaa]">B&amp;Z Builds</span>{" "}
