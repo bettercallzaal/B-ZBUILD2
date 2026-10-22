@@ -40,10 +40,11 @@ export default function Stream20261021() {
         </p>
 
         <section className="mt-10">
-          <h2 className="text-xl font-semibold mb-4">Full stream</h2>
+          <h2 className="text-xl font-semibold mb-1">Full stream</h2>
+          <p className="text-white/50 text-sm mb-4">0:00:00 to 1:38:00, the talk</p>
           <div className="aspect-video rounded-2xl overflow-hidden border border-white/10">
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}`}
+              src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?end=5880`}
               title="B&Z Builds - 2026-10-21"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
