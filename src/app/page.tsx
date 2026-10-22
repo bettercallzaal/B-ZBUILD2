@@ -313,6 +313,13 @@ export default function HomePage() {
               </div>
             </div>
 
+            <p className="text-center text-white/60">
+              Missed one? Watch{" "}
+              <a href="/streams/2026-10-21" className="underline hover:text-white">
+                B&amp;Z Builds, 21 Oct 2026
+              </a>
+              .
+            </p>
           </div>
         </section>
 
