@@ -14,6 +14,8 @@ export type Credit = {
   /** Track names as written on screen */
   tracks: string[];
   artist: string;
+  /** Shown as @handle next to the name, on the platform url points to */
+  handle?: string;
   url?: string;
 };
 
@@ -42,6 +44,7 @@ export const streams: Stream[] = [
       {
         tracks: ["OHNAHJI", "HENG DEM"],
         artist: "IMan Afrikah",
+        handle: "IManAfrikah",
         url: "https://audius.co/IManAfrikah",
       },
     ],

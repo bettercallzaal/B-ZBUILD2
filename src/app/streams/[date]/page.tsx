@@ -54,11 +54,11 @@ export default async function StreamPage({ params }: Props) {
         </h1>
         <p className="mt-3 text-white/60">
           <a href="https://x.com/bettercallzaal" className="hover:text-white">
-            BetterCallZaal
+            BetterCallZaal (@bettercallzaal)
           </a>{" "}
           and{" "}
           <a href="https://x.com/Ohnahji" className="hover:text-white">
-            Ohnahji B
+            Ohnahji B (@Ohnahji)
           </a>{" "}
           bring back B&amp;Z Builds: {stream.summary}
         </p>
@@ -104,6 +104,7 @@ export default async function StreamPage({ params }: Props) {
             ) : (
               credit.artist
             )}
+            {credit.handle && ` (@${credit.handle})`}
             .
           </p>
         ))}
